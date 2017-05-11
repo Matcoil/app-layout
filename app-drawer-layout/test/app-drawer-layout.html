@@ -134,16 +134,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }, 150);
       });
 
-      test('disable initial drawer transition', function(done) {
-        assert.equal(drawer.transitionDuration, 0);
-        Polymer.dom.flush();
-
-        window.setTimeout(function() {
-          assert.equal(drawer.transitionDuration, 200);
-          done();
-        }, 150);
-      });
-
       test('content layout', function(done) {
         drawerLayout.responsiveWidth = '10000px';
 

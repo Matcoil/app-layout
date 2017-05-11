@@ -797,6 +797,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         assert.equal(drawer.getBoundingClientRect().right, window.innerWidth);
       });
+
+      test('persistent drawer should not transition', function() {
+        drawer.persistent = true;
+
+        assert.equal(window.getComputedStyle(contentContainer)['transition-property'], 'none');
+      });
     });
 
   </script>
